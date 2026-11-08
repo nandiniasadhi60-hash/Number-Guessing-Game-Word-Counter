@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Game Container -->
+    <div class="game-container">
+
+        <!-- Game Heading -->
+        <h1>🎮 Number Guessing Game</h1>
+
+        <p class="description">
+            Welcome to the Number Guessing Game!
+        </p>
+
+        <p class="instructions">
+            I have selected a number between 1 and 100.
+            Can you guess the correct number?
+        </p>
+
+        <!-- User Input Section -->
+        <div class="input-section">
+
+            <label for="guessInput">
+                Enter Your Guess:
+            </label>
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter a number (1-100)"
+                min="1"
+                max="100"
+            >
+
+            <button
+                id="guessButton"
+                onclick="checkGuess()"
+            >
+                Check Guess
+            </button>
+
+        </div>
+
+        <!-- Game Result -->
+        <div class="result-section">
+
+            <h2 id="message">
+                Good luck! Start guessing.
+            </h2>
+
+            <p>
+                Number of Attempts:
+                <span id="attempts">0</span>
+            </p>
+
+        </div>
+
+        <!-- Restart Game Button -->
+        <button
+            id="restartButton"
+            onclick="restartGame()"
+            disabled
+        >
+            🔄 Restart Game
+        </button>
+
+    </div>
+
+    <!-- Connect JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
